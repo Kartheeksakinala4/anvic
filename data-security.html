@@ -27,10 +27,40 @@
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="data-recovery.html">Data Recovery</a></li>
-        <li><a href="data-preserve.html">Data Preserve</a></li>
-        <li><a href="data-security.html">Data Security</a></li>
-        <li><a href="products.html">Products</a></li>
+        <li class="has-dropdown">
+          <a href="data-recovery.html">Data Recovery</a>
+          <ul class="dropdown">
+            <li><a href="data-recovery.html#logical">Logical Recovery</a></li>
+            <li><a href="data-recovery.html#firmware">Firmware Recovery</a></li>
+            <li><a href="data-recovery.html#physical">Physical Recovery</a></li>
+            <li><a href="data-recovery.html#cctv">CCTV / DVR Recovery</a></li>
+            <li><a href="data-recovery.html#nvme">NVMe Recovery</a></li>
+            <li><a href="data-recovery.html#faq">Recovery FAQ</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="data-preserve.html">Data Preserve</a>
+          <ul class="dropdown">
+            <li><a href="data-preserve.html#home-cloud">Home Cloud Setup</a></li>
+            <li><a href="data-preserve.html#backup-321">3-2-1 Backup Strategy</a></li>
+            <li><a href="products.html#storage">Storage Products</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="data-security.html">Data Security</a>
+          <ul class="dropdown">
+            <li><a href="data-security.html#services">Encryption Services</a></li>
+            <li><a href="data-security.html#erasure">Secure Data Erasure</a></li>
+            <li><a href="products.html#security">Encrypted Hardware</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="products.html">Products</a>
+          <ul class="dropdown">
+            <li><a href="products.html#storage">Storage Products</a></li>
+            <li><a href="products.html#security">Encrypted Hardware</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">About</a></li>
         <li><a class="btn btn-primary" href="contact.html">Get Free Evaluation</a></li>
       </ul>
@@ -50,7 +80,7 @@
     <section class="section" id="services">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Encryption services</span>
+          <span class="eyebrow eb-security">Encryption services</span>
           <h2>Security that's actually usable</h2>
           <p>Encryption fails in practice for two reasons: it's too hard to use, or keys get lost. Our deployments solve both — strong defaults, transparent day-to-day use, and recovery keys escrowed safely.</p>
         </div>
@@ -103,7 +133,7 @@
               <li>Per-folder encryption for teams</li>
             </ul>
           </article>
-          <article class="card reveal">
+          <article class="card reveal" id="erasure">
             <div class="icon">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"/></svg>
             </div>
@@ -135,7 +165,7 @@
     <section class="section section-alt" id="products">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Looking for hardware?</span>
+          <span class="eyebrow eb-security">Looking for hardware?</span>
           <h2>Encryption you can hold</h2>
           <p>Keypad and biometric portable drives, FIPS-validated encrypted USB drives and self-encrypting SSDs (SED/OPAL) now live in our dedicated products catalogue — where encryption is built into the silicon, not bolted on.</p>
         </div>
@@ -147,7 +177,7 @@
     <section class="section">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Why it's different here</span>
+          <span class="eyebrow eb-security">Why it's different here</span>
           <h2>Security advice from people who see the failures</h2>
           <p>We run a data recovery lab. We see what actually goes wrong: the unencrypted backup drive in a stolen bag, the "wiped" laptop full of recoverable files, the encrypted NAS whose only key died with a phone. That experience shapes every deployment — strong against attackers, and safe against lockouts.</p>
         </div>

@@ -27,10 +27,40 @@
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="data-recovery.html">Data Recovery</a></li>
-        <li><a href="data-preserve.html">Data Preserve</a></li>
-        <li><a href="data-security.html">Data Security</a></li>
-        <li><a href="products.html">Products</a></li>
+        <li class="has-dropdown">
+          <a href="data-recovery.html">Data Recovery</a>
+          <ul class="dropdown">
+            <li><a href="data-recovery.html#logical">Logical Recovery</a></li>
+            <li><a href="data-recovery.html#firmware">Firmware Recovery</a></li>
+            <li><a href="data-recovery.html#physical">Physical Recovery</a></li>
+            <li><a href="data-recovery.html#cctv">CCTV / DVR Recovery</a></li>
+            <li><a href="data-recovery.html#nvme">NVMe Recovery</a></li>
+            <li><a href="data-recovery.html#faq">Recovery FAQ</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="data-preserve.html">Data Preserve</a>
+          <ul class="dropdown">
+            <li><a href="data-preserve.html#home-cloud">Home Cloud Setup</a></li>
+            <li><a href="data-preserve.html#backup-321">3-2-1 Backup Strategy</a></li>
+            <li><a href="products.html#storage">Storage Products</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="data-security.html">Data Security</a>
+          <ul class="dropdown">
+            <li><a href="data-security.html#services">Encryption Services</a></li>
+            <li><a href="data-security.html#erasure">Secure Data Erasure</a></li>
+            <li><a href="products.html#security">Encrypted Hardware</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="products.html">Products</a>
+          <ul class="dropdown">
+            <li><a href="products.html#storage">Storage Products</a></li>
+            <li><a href="products.html#security">Encrypted Hardware</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">About</a></li>
         <li><a class="btn btn-primary" href="contact.html">Get Free Evaluation</a></li>
       </ul>
@@ -50,7 +80,7 @@
     <section class="section" id="home-cloud">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Flagship service</span>
+          <span class="eyebrow eb-preserve">Flagship service</span>
           <h2>Home Cloud Setup</h2>
           <p>Your own private cloud — the convenience of Google Drive or iCloud, but on hardware you own, with no subscriptions, no upload limits, and no third party holding your files.</p>
         </div>
@@ -102,10 +132,10 @@
     </section>
 
     <!-- ============ 3-2-1 ============ -->
-    <section class="section section-alt">
+    <section class="section section-alt" id="backup-321">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Our design principle</span>
+          <span class="eyebrow eb-preserve">Our design principle</span>
           <h2>Every setup follows the 3-2-1 rule</h2>
           <p>The gold standard of data preservation, applied to your home or business:</p>
         </div>
@@ -121,7 +151,7 @@
     <section class="section" id="products">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Looking for hardware?</span>
+          <span class="eyebrow eb-preserve">Looking for hardware?</span>
           <h2>The products that power preservation</h2>
           <p>NAS systems, NAS-grade and enterprise drives, SSDs &amp; NVMe, external backup drives, RAID enclosures, high-endurance memory cards and UPS protection now live in our dedicated products catalogue — every item supplied configured, tested and supported.</p>
         </div>
