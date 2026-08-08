@@ -8,8 +8,9 @@ Commercial website for **ANVIC** — *Recovering, preserving, and protecting val
 |---|---|
 | `index.html` | Home — three service pillars, featured solutions, process, trust signals |
 | `data-recovery.html` | Logical / Firmware / Physical recovery + CCTV and NVMe specialist programs + FAQ |
-| `data-preserve.html` | Home cloud (NAS) setup, 3-2-1 backup strategy, storage products |
-| `data-security.html` | Encryption services, key management, secure erasure, encrypted hardware products |
+| `data-preserve.html` | Home cloud (NAS) setup, 3-2-1 backup strategy (services/solutions only) |
+| `data-security.html` | Encryption services, key management, secure erasure (services/solutions only) |
+| `products.html` | All products — storage catalogue (`#storage`) and encrypted hardware (`#security`) |
 | `about.html` | Company story, principles, audiences |
 | `contact.html` | Enquiry form + emergency data-loss guidance |
 | `404.html` | Not-found page (served automatically by GitHub Pages) |
