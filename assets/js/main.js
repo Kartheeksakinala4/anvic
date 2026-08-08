@@ -99,13 +99,13 @@
     };
 
     var draw = function () {
-      ctx.fillStyle = "rgba(10, 14, 26, 0.1)";
+      ctx.fillStyle = "rgba(247, 249, 252, 0.12)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.font = FS + "px monospace";
       for (var i = 0; i < drops.length; i++) {
         var ch = CHARS[(Math.random() * CHARS.length) | 0];
-        var alpha = Math.random() > 0.85 ? 0.55 : 0.18;
-        ctx.fillStyle = "rgba(34, 211, 238, " + alpha + ")";
+        var alpha = Math.random() > 0.85 ? 0.4 : 0.14;
+        ctx.fillStyle = "rgba(8, 145, 178, " + alpha + ")";
         ctx.fillText(ch, i * FS, drops[i] * FS);
         if (drops[i] * FS > canvas.height && Math.random() > 0.975) drops[i] = 0;
         drops[i]++;
@@ -119,7 +119,15 @@
 
   // Animated stat counters
   var counters = document.querySelectorAll("[data-target]");
-  if (counters.length && "IntersectionObserver" in window && !reducedMotion) {
+  var setFinal = function (el) {
+    el.textContent =
+      (el.getAttribute("data-prefix") || "") +
+      el.getAttribute("data-target") +
+      (el.getAttribute("data-suffix") || "");
+  };
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+    counters.forEach(setFinal);
+  } else if (counters.length) {
     var animateCount = function (el) {
       var target = parseInt(el.getAttribute("data-target"), 10);
       var prefix = el.getAttribute("data-prefix") || "";
