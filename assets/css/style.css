@@ -700,3 +700,148 @@ textarea { resize: vertical; min-height: 130px; }
 .footer-grid ul a:hover { color: #22d3ee; }
 .footer-about p { color: #8fa0b8; }
 .footer-bottom { color: #8fa0b8; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
+/* ============================================================
+   Homepage showcase — marquee bar + solutions carousel
+   ============================================================ */
+
+/* ---------- Marquee bar ---------- */
+.marquee {
+  overflow: hidden;
+  border-block: 1px solid var(--border);
+  background: var(--surface);
+  padding: 15px 0;
+}
+.marquee-track { display: flex; width: max-content; }
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding-right: 48px;
+  flex-shrink: 0;
+  animation: marqueeScroll 30s linear infinite;
+}
+.marquee:hover .marquee-group { animation-play-state: paused; }
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+.mq-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.marquee-item:nth-child(even) .mq-dot { background: var(--accent-2); }
+@keyframes marqueeScroll {
+  to { transform: translateX(-100%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee { overflow-x: auto; }
+  .marquee-group { animation: none; }
+}
+
+/* ---------- Solutions carousel ---------- */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: 40px;
+  align-items: center;
+  padding: 52px 96px 64px;
+  min-height: 360px;
+}
+.slide-art { display: flex; align-items: center; justify-content: center; }
+.slide-art svg { width: min(230px, 100%); height: auto; }
+.slide-tag {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.tag-recovery { background: rgba(8, 145, 178, 0.08); color: var(--c-recovery); border: 1px solid rgba(8, 145, 178, 0.22); }
+.tag-preserve { background: rgba(5, 150, 105, 0.08); color: var(--c-preserve); border: 1px solid rgba(5, 150, 105, 0.22); }
+.tag-security { background: rgba(124, 58, 237, 0.08); color: var(--c-security); border: 1px solid rgba(124, 58, 237, 0.22); }
+.tag-products { background: rgba(217, 119, 6, 0.08); color: var(--c-products); border: 1px solid rgba(217, 119, 6, 0.22); }
+.slide h3 { font-size: 1.55rem; margin-bottom: 12px; }
+.slide p { color: var(--muted); }
+.slide .card-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-weight: 600; }
+
+.car-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  transition: border-color 0.2s, color 0.2s;
+}
+.car-btn:hover { border-color: var(--accent); color: var(--accent); }
+.car-btn.prev { left: 18px; }
+.car-btn.next { right: 18px; }
+
+.car-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.car-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  background: var(--border);
+  cursor: pointer;
+  transition: width 0.25s, background 0.25s;
+}
+.car-dot.active { width: 26px; background: var(--accent); }
+
+@media (max-width: 720px) {
+  .slide {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 28px 70px;
+    text-align: center;
+  }
+  .slide-art svg { width: 130px; }
+  .slide .card-link { justify-content: center; }
+  .car-btn { display: none; }
+}
