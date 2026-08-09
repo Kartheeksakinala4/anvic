@@ -5,19 +5,38 @@ ANVIC is a subsidiary of **Pynek Technologies Private Limited**.
 
 ## Site structure
 
+Three pillars, each with **Services** and **Products** in its nav dropdown, and a
+dedicated page per sub-item. There is no separate Products tab — products live
+under the pillar they belong to.
+
 | Page | Purpose |
 |---|---|
-| `index.html` | Home — hero, solutions marquee, auto-rotating solutions carousel, three pillars, process, trust signals |
-| `data-recovery.html` | Hub — Logical / Firmware / Physical recovery + CCTV and NVMe overviews + FAQ, linking to the detail pages below |
-| `logical-recovery.html` | Service — deleted, formatted, corrupted file systems, lost partitions |
-| `firmware-recovery.html` | Service — service-area repair, translator rebuilds, 0 GB / busy drives |
-| `physical-recovery.html` | Service — head swaps, motor seizure, PCB repair, donor matching |
-| `encryption.html` | Service — encrypted volume recovery (with keys) + encryption deployment |
-| `cctv-recovery.html` | Product — DVR/NVR footage reconstruction, evidence-grade packages |
-| `ssd-recovery-tool.html` | Product — bench imaging toolkit for unstable SATA/NVMe SSDs |
-| `data-preserve.html` | Home cloud (NAS) setup, 3-2-1 backup strategy (services/solutions only) |
-| `data-security.html` | Encryption services, key management, secure erasure (services/solutions only) |
-| `products.html` | All products — storage catalogue (`#storage`) and encrypted hardware (`#security`) |
+| `index.html` | Home — hero, solutions marquee, auto-rotating carousel, three pillars, process |
+| **Data Recovery** | |
+| `data-recovery.html` | Pillar hub — failure classes, specialist programs, FAQ |
+| `logical-recovery.html` | Service — deleted, formatted, corrupted file systems |
+| `firmware-recovery.html` | Service — service-area repair, translator rebuilds |
+| `physical-recovery.html` | Service — head swaps, PCB repair, donor matching |
+| `encryption.html` | Service — encrypted volume recovery (with your keys) |
+| `cctv-recovery.html` | Product — DVR/NVR footage reconstruction packages |
+| `ssd-recovery-tool.html` | Product — bench imaging toolkit for SATA/NVMe SSDs |
+| **Data Preserve** | |
+| `data-preserve.html` | Pillar hub — home cloud, 3-2-1 principle, product summary |
+| `home-cloud-setup.html` | Service — private NAS cloud, deployment and handover |
+| `backup-strategy.html` | Service — 3-2-1 design, off-site copies, restore testing |
+| `managed-care.html` | Service — monitoring, updates, backup verification |
+| `nas-systems.html` | Product — Synology, QNAP, TrueNAS systems |
+| `storage-drives.html` | Product — NAS/enterprise HDDs, SSDs, externals, cards |
+| `power-protection.html` | Product — UPS and surge protection |
+| **Data Security** | |
+| `data-security.html` | Pillar hub — encryption services, erasure, product summary |
+| `disk-encryption.html` | Service — BitLocker/FileVault/LUKS rollout, key escrow |
+| `secure-erasure.html` | Service — NIST 800-88 sanitisation, certificates |
+| `security-review.html` | Service — exposure assessment and roadmap |
+| `encrypted-drives.html` | Product — hardware-encrypted portable drives |
+| `encrypted-usb.html` | Product — FIPS-validated keypad USB drives |
+| `self-encrypting-ssd.html` | Product — SED/OPAL internal SSDs |
+| **Company** | |
 | `about.html` | Company story, principles, audiences |
 | `contact.html` | Enquiry form + emergency data-loss guidance |
 | `404.html` | Not-found page (served automatically by GitHub Pages) |
