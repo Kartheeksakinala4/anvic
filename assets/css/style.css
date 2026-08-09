@@ -845,3 +845,33 @@ textarea { resize: vertical; min-height: 130px; }
   .slide .card-link { justify-content: center; }
   .car-btn { display: none; }
 }
+
+/* ---------- Two-column (mega) dropdown ---------- */
+.dropdown-mega {
+  display: flex;
+  gap: 6px;
+  min-width: 440px;
+  padding: 12px;
+}
+.dd-group { flex: 1; }
+.dd-head {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 6px 14px;
+}
+.dd-group:nth-child(2) .dd-head { color: var(--c-products); }
+.dd-group ul { list-style: none; margin: 0; padding: 0; }
+
+@media (max-width: 720px) {
+  .dropdown-mega {
+    flex-direction: column;
+    min-width: 0;
+    padding: 0 0 4px 18px;
+    gap: 0;
+  }
+  .dd-head { padding: 8px 0 2px; }
+}

@@ -1,13 +1,20 @@
 # ANVIC — Company Website
 
 Commercial website for **ANVIC** — *Recovering, preserving, and protecting valuable personal and business data.*
+ANVIC is a subsidiary of **Pynek Technologies Private Limited**.
 
 ## Site structure
 
 | Page | Purpose |
 |---|---|
-| `index.html` | Home — three service pillars, featured solutions, process, trust signals |
-| `data-recovery.html` | Logical / Firmware / Physical recovery + CCTV and NVMe specialist programs + FAQ |
+| `index.html` | Home — hero, solutions marquee, auto-rotating solutions carousel, three pillars, process, trust signals |
+| `data-recovery.html` | Hub — Logical / Firmware / Physical recovery + CCTV and NVMe overviews + FAQ, linking to the detail pages below |
+| `logical-recovery.html` | Service — deleted, formatted, corrupted file systems, lost partitions |
+| `firmware-recovery.html` | Service — service-area repair, translator rebuilds, 0 GB / busy drives |
+| `physical-recovery.html` | Service — head swaps, motor seizure, PCB repair, donor matching |
+| `encryption.html` | Service — encrypted volume recovery (with keys) + encryption deployment |
+| `cctv-recovery.html` | Product — DVR/NVR footage reconstruction, evidence-grade packages |
+| `ssd-recovery-tool.html` | Product — bench imaging toolkit for unstable SATA/NVMe SSDs |
 | `data-preserve.html` | Home cloud (NAS) setup, 3-2-1 backup strategy (services/solutions only) |
 | `data-security.html` | Encryption services, key management, secure erasure (services/solutions only) |
 | `products.html` | All products — storage catalogue (`#storage`) and encrypted hardware (`#security`) |
